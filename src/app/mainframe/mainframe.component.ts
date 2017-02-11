@@ -10,6 +10,7 @@ export class MainframeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log('MAINFRAME LOADED');
   }
 
 }

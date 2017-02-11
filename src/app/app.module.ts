@@ -9,10 +9,12 @@ import { MainframeComponent } from './mainframe/mainframe.component';
 import { RecordComponent } from './record/record.component';
 import { MainComponent } from './record/main/main.component';
 import { OverviewComponent } from './record/overview/overview.component';
+import { PreloadComponent } from './preload/preload.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'mainframe', pathMatch: 'full' },
   { path: 'mainframe', component: MainframeComponent },
+  { path: 'preload', component: PreloadComponent },
   {
     path: 'record',
     component: RecordComponent,
@@ -30,7 +32,8 @@ export const routes: Routes = [
     MainframeComponent,
     RecordComponent,
     MainComponent,
-    OverviewComponent
+    OverviewComponent,
+    PreloadComponent
   ],
   imports: [
     BrowserModule,
