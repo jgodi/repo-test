@@ -6,7 +6,11 @@ const app = express();
 app.use(express.static(path.resolve('dist')));
 
 // Catch all other routes and return the index file
-app.get('*', (req, res) => {
+app.get('*', (req, res, next) => {
+  // Check for session!
+  // Redirect if no session!
+  next();
+}, (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
