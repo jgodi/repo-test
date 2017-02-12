@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-record',
   templateUrl: './record.component.html',
-  styleUrls: ['./record.component.css']
+  styleUrls: ['./record.component.scss']
 })
 export class RecordComponent implements OnInit {
   // Hide header (checked via query param)
