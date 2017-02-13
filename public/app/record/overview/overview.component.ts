@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SingletonService } from './../../services/singleton.service';
 
 @Component({
   selector: 'app-overview',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OverviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(public singleton: SingletonService) { }
 
   ngOnInit() {
+    console.log('[Record - Overview] - Singleton -', this.singleton.uuid);
   }
 
 }

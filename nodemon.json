@@ -1,4 +1,8 @@
 {
+  "watch": [
+    "dist/",
+    "server/"
+  ],
   "events": {
     "restart": "osascript -e 'display notification \"Restarted! Refresh Browser...\" with title \"Novo\"'"
   }

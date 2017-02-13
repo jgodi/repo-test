@@ -26,4 +26,4 @@ export const routes: Routes = [
 })
 export class MainframeModule { }
 
-console.log('MainframeModule Loaded!');
+console.log('[Mainframe] - Module Loaded');

@@ -9,9 +9,9 @@ import { MainComponent } from './main/main.component';
 import { OverviewComponent } from './overview/overview.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'record', pathMatch: 'full' },
+  { path: '', redirectTo: 'routes', pathMatch: 'full' },
   {
-    path: 'record',
+    path: 'routes',
     component: RecordComponent,
     children: [
       { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -36,4 +36,4 @@ export const routes: Routes = [
 })
 export class RecordModule { }
 
-console.log('RecordModule Loaded!');
+console.log('[Record] - Module Loaded');

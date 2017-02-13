@@ -4,7 +4,7 @@ import { Routes, RouterModule, PreloadingStrategy, Route } from '@angular/router
 import { Observable } from 'rxjs/Rx';
 
 import { AppComponent } from './app.component';
-import { PreloadComponent } from './preload/preload.component';
+import { SingletonService } from './services/singleton.service';
 
 export class PreloadSelectedModulesList implements PreloadingStrategy {
   preload(route: Route, load: Function): Observable<any> {
@@ -13,21 +13,20 @@ export class PreloadSelectedModulesList implements PreloadingStrategy {
 }
 
 export const routes: Routes = [
-  { path: 'preload', component: PreloadComponent },
-  { path: '', loadChildren: './mainframe/mainframe.module#MainframeModule', pathMatch: 'full' },
-  { path: 'record', loadChildren: './record/record.module#RecordModule', data: { preload: true } }
+  { path: 'content', loadChildren: './preload/preload.module#PreloadModule' },
+  { path: '', loadChildren: './mainframe/mainframe.module#MainframeModule', pathMatch: 'full' }
 ];
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PreloadComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes, { useHash: true, preloadingStrategy: PreloadSelectedModulesList })
   ],
   providers: [
+    SingletonService,
     PreloadSelectedModulesList
   ],
   bootstrap: [AppComponent]

@@ -1,16 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { SingletonService } from './../services/singleton.service';
 
 @Component({
   selector: 'app-mainframe',
   templateUrl: './mainframe.component.html',
   styleUrls: ['./mainframe.component.scss']
 })
-export class MainframeComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-    console.log('MAINFRAME LOADED!!!');
-  }
-
+export class MainframeComponent {
+  constructor(public singleton: SingletonService) { }
 }
