@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Bullhorn</title>
+  <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" type="text/css">
+  <% if (environment !== 'development') { %>
+    <link href="//cdn.rawgit.com/bullhorn/bullhorn-icons/1.12.0/fonts/Bullhorn-Glyphicons.css" rel="stylesheet" type="text/css">
+    <% } else { %>
+      <link href="//rawgit.com/bullhorn/bullhorn-icons/development/fonts/Bullhorn-Glyphicons.css" rel="stylesheet" type="text/css">
+      <% } %>
+</head>
+
+<body>
+  <app-root settings="<%=JSON.stringify(settings)%>" entitlements="<%=JSON.stringify(entitlements)%>" ulUrl="<%=ulUrl%>" ulLoginPage="<%=ulLoginPage%>">
+    Loading...
+  </app-root>
+</body>
+
+</html>
